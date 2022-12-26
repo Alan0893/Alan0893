@@ -6,7 +6,7 @@
     alanl07905@gmail.com</a>  
 
 <h3 align="left">Contact & Links</h3>
-<a href="https://www.linkedin.com/in/alan-l-65064b259/" target="_blank">
+<a href="https://www.linkedin.com/in/alanl193/" target="_blank">
   <img align="left" src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="linkedin" width="40" height="40">
 </a>
 <a href="https://discordapp.com/users/421318660313972747" target="_blank">

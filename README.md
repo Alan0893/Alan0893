@@ -9,7 +9,7 @@
 <a href="https://www.linkedin.com/in/alan-l-65064b259/" target="_blank">
   <img align="left" src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="linkedin" width="40" height="40">
 </a>
-<a href="https://discordapp.com/users/421318660313972747" target="_blank">
+<a href="discord://-/users/421318660313972747" target="_blank">
     <img align="left" src="https://cdn.worldvectorlogo.com/logos/discord-6.svg" alt="discord" width="40" height="40">
 </a>
 

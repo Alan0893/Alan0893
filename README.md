@@ -47,7 +47,7 @@
 
 <h3 align="left">Projects</h3>
 
-- **[Dow Jones Stock Predictor](https://github.com/Alan0893/dow_jones_stock_predictor):** This project was created for the 2022 BostonHacks Hackathon. This stock predictor utilizes trends form the past to predict future trends. It collects data from yahoo finance and employs streamlit to run the application.
+- **[Dow Jones Stock Predictor](https://github.com/Alan0893/dow_jones_stock_predictor):** This project was created for the 2022 BostonHacks Hackathon. This stock predictor utilizes trends from the past to predict future trends. It collects data from yahoo finance and employs streamlit to run the application.
 
 - **[Calculator](https://github.com/Alan0893/Calculator):** Initially created for me to learn html & css,  I decided to add additional features to the application. It has the ability to perform standard operations (addition, subtraction, etc.), as well as being able to convert units.
 

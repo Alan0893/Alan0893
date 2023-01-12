@@ -35,12 +35,12 @@
   <a href="https://nodejs.org/en/" target="_blank">
     <img align="left" src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="nodejs" width="40" height="40">
   </a>
-  <a href="https://git-scm.com/" target="_blank">
+  <!--a href="https://git-scm.com/" target="_blank">
     <img align="left" src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="git" width="40" height="40">
   </a>
   <a href="https://www.json.org/json-en.html" target="_blank">
     <img align="left" src="https://cdn.worldvectorlogo.com/logos/json.svg" alt="json" width="40" height="40">
-  </a>
+  </a-->
   
 <br>
 <br>

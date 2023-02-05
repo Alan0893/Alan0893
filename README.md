@@ -47,7 +47,7 @@
 
 <h3 align="left">Projects</h3>
 
-- **[Countrx](https://countrx.netlify.app/):** A website using the [REST Countries](https://restcountries.com/) API to display specific country information. This website uses a country query to display the country information in a simplfied view.
+- **[Countrx](https://countrx.netlify.app/):** A website using the [REST Countries](https://restcountries.com/) API to display specific country information. This website uses a country query to display the country information in a simplfied view. Employs the Googles Maps Embed API to display a map of the country.
 
 - **[Dow Jones Stock Predictor](https://github.com/Alan0893/dow_jones_stock_predictor):** This project was created for the 2022 BostonHacks Hackathon. This stock predictor utilizes trends from the past to predict future trends. It collects data from yahoo finance and employs streamlit to run the application.
 

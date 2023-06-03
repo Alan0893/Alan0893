@@ -32,15 +32,16 @@
   <a href="https://www.arduino.cc/" target="_blank">
     <img align="left" src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40">
   </a>
-  <a href="https://nodejs.org/en/" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="nodejs" width="40" height="40">
+  <a href="https://www.intel.com/content/dam/develop/external/us/en/documents/introduction-to-x64-assembly-181178.pdf" target="_blank">
+    <img align="left" src="https://user-images.githubusercontent.com/5421823/62779159-4cf76880-baaa-11e9-8318-e20a1aaa913a.png" alt="assembly" width="55" height="55">
   </a>
-  <!--a href="https://git-scm.com/" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="git" width="40" height="40">
+  <a href="https://react.dev/" target="_blank">
+    <img align="left" src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="reactjs" width="40" height="40r">
   </a>
-  <a href="https://www.json.org/json-en.html" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/json.svg" alt="json" width="40" height="40">
-  </a-->
+  </a>
+  <a href="https://firebase.google.com/" target="_blank">
+    <img align="left" src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="firebase" width="40" height="40r">
+  </a>
   
 <br>
 <br>

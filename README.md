@@ -48,8 +48,8 @@
 
 <h3 align="left">Projects</h3>
 
+- **[StreamSift](https://streamsift.netlify.app/):** Harnesses the capabilities of the TMDB (The Movie Database) API to deliver timely and accurate information on popular movies and series. Users can access up-to-date details, including descriptions, cast members, and character information. Utilizes the TMDB API to target searches for specific movie or series queries.
+
 - **[TaskEase](https://taskease.netlify.app/):** Implemented an API leveraging Firebase functions to seamlessly access user information and todo items. Employed Firebase database to efficiently store and manage user collections and todo collections. Incorporated Firebase authentication system to enable secure user sign-in and account creation. Utilized Firebase storage for seamless storage of user profile pictures. Developed a ReactJS application to provide an intuitive and visually appealing user interface for managing and displaying todo lists after user login.
 
 - **[Countrx](https://countrx.netlify.app/):** Integrated the RESTful Countries API to fetch and display comprehensive data about different countries. Leveraged the Google Maps Embed API to showcase an interactive map of specified country. This project offers an engaging and informative user experience, allowing users to explore diverse countries and access relevant geographical details effortlessly.
-
-- **[Dow Jones Stock Predictor](https://github.com/jasonw4/STOCK_PREDICTION):** Developed a Python-based application using Streamlit to predict future trends based on past data. Leveraged yfinance for retrieving historical stock data and utilized Prophet for time series forecasting. Incorporated Plotly for interactive data visualization. Focused on stock prediction for Dow Jones companies. Provided an intuitive user interface for selecting datasets and forecasting time periods. The project aimed to analyze historical trends and generate insightful predictions to support decision-making in the stock market.

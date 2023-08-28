@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Alan</h1>
 <h3 align="center">Aspiring Software Engineer & CS Student at Boston University</h3>
 
-- Portfolio: [alanport](https://alanport.netlify.app/)
+- Portfolio: [alanv2](https://alanv2.netlify.app/)
 - Email: <a href="mailto:alanl07905@gmail.com" target="_blank">
     alanl07905@gmail.com</a>  
 

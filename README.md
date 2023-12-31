@@ -29,12 +29,6 @@
   <a href="https://www.w3schools.com/css/" target="_blank">
     <img align="left" src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="css" width="40"  height="40">
   </a>
-  <a href="https://www.arduino.cc/" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40">
-  </a>
-  <a href="https://www.intel.com/content/dam/develop/external/us/en/documents/introduction-to-x64-assembly-181178.pdf" target="_blank">
-    <img align="left" src="https://user-images.githubusercontent.com/5421823/62779159-4cf76880-baaa-11e9-8318-e20a1aaa913a.png" alt="assembly" width="55" height="55">
-  </a>
   <a href="https://react.dev/" target="_blank">
     <img align="left" src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="reactjs" width="40" height="40r">
   </a>

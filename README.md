@@ -1,22 +1,13 @@
 <h1 align="center">Hi, I'm Alan</h1>
-<h3 align="center">Aspiring Software Engineer & CS Student at Boston University</h3>
+<h3 align="center">CS Student @ Boston University</h3>
 
 - Portfolio: [alanv2](https://alanv2.netlify.app/)
-- Email: <a href="mailto:alanl07905@gmail.com" target="_blank">
-    alanl07905@gmail.com</a>  
-
-<h3 align="left">Contact & Links</h3>
-<a href="https://www.linkedin.com/in/alanl193/" target="_blank">
-  <img align="left" src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="linkedin" width="40" height="40">
-</a>
-<a href="https://discordapp.com/users/421318660313972747" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/discord-6.svg" alt="discord" width="40" height="40">
-</a>
-  
-<br>
-<br>
+- Email: <a href="mailto:alanl07905@gmail.com" target="_blank">alanl07905@gmail.com</a>
+- LinkedIn: <a href="https://www.linkedin.com/in/alanl193/" target="_blank">alanl193</a>
 
 <h3 align="left">Projects</h3>
+
+- **[Spotify Profile](https://github.com/Alan0893/Spotify-Profile):** Utilizes the Spotify API to display a variety of information, including User, Artists, Albums/Playlists, Tracks, and Recents. Incorporates the TicketMaster API to display upcoming events for an artist. 
 
 - **[StreamSift](https://streamsift.netlify.app/):** Harnesses the capabilities of the TMDB (The Movie Database) API to deliver timely and accurate information on popular movies and series. Users can access up-to-date details, including descriptions, cast members, and character information. Utilizes the TMDB API to target searches for specific movie or series queries.
 

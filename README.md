@@ -12,30 +12,6 @@
 <a href="https://discordapp.com/users/421318660313972747" target="_blank">
     <img align="left" src="https://cdn.worldvectorlogo.com/logos/discord-6.svg" alt="discord" width="40" height="40">
 </a>
-
-<br>
-<br>
-
-<h3 align="left">Languages & Tools</h3>
-   <a href="https://www.java.com/en/" target="_blank">
-     <img align="left" src="https://cdn.worldvectorlogo.com/logos/java-14.svg" alt="java" width="40" height="40">
-  </a>
-  <a href="https://www.javascript.com/" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" alt="javascript" width="40" height="40">
-  </a> 
-  <a href="https://html.com/" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="html" width="40" height="40">
-  </a>
-  <a href="https://www.w3schools.com/css/" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="css" width="40"  height="40">
-  </a>
-  <a href="https://react.dev/" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="reactjs" width="40" height="40r">
-  </a>
-  </a>
-  <a href="https://firebase.google.com/" target="_blank">
-    <img align="left" src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="firebase" width="40" height="40r">
-  </a>
   
 <br>
 <br>

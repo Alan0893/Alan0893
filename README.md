@@ -7,7 +7,7 @@
 
 <h3 align="left">Projects</h3>
 
-- **[Spotify Profile](https://github.com/Alan0893/Spotify-Profile):** Utilizes the Spotify API to display a variety of information, including User, Artists, Albums/Playlists, Tracks, and Recents. Incorporates the TicketMaster API to display upcoming events for an artist. 
+- **[Spotify Profile](https://sprofile.onrender.com/):** Utilizes the Spotify API to display a variety of information, including User, Artists, Albums/Playlists, Tracks, and Recents. Incorporates the TicketMaster API to display upcoming events for an artist. 
 
 - **[StreamSift](https://streamsift.netlify.app/):** Harnesses the capabilities of the TMDB (The Movie Database) API to deliver timely and accurate information on popular movies and series. Users can access up-to-date details, including descriptions, cast members, and character information. Utilizes the TMDB API to target searches for specific movie or series queries.
 

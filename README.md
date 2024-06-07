@@ -25,6 +25,6 @@ color: red;
   height: 100vh;
   width: 100vw;
   opacity: 0.4;
-  background: url('https://raw.githubusercontent.com/Alan0893/Alan0893/main/bg.png') no-repeat center center;
+  background: url('https://raw.githubusercontent.com/Alan0893/Alan0893/main/bg2.jpg') no-repeat center center;
   background-size: cover;
 ]{x0000}$}

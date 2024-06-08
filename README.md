@@ -12,19 +12,3 @@
 - **[StreamSift](https://streamsift.netlify.app/):** Harnesses the capabilities of the TMDB (The Movie Database) API to deliver timely and accurate information on popular movies and series. Users can access up-to-date details, including descriptions, cast members, and character information. Utilizes the TMDB API to target searches for specific movie or series queries.
 
 - **[NoteCove](https://notecove.netlify.app/):** Implemented an API leveraging Firebase functions to seamlessly access user information and note items. Employed Firebase database to efficiently store and manage user collections and note collections. Incorporated Firebase authentication system to enable secure user sign-in and account creation. Utilized Firebase storage for seamless storage of user profile pictures. Developed a ReactJS application to provide an intuitive and visually appealing user interface for managing and displaying note lists after user login.
-
-
-```math
-\ce{$\unicode[
-color: red;
-  pointer-events: none;
-  z-index: -10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  opacity: 0.8;
-  background: url('https://raw.githubusercontent.com/Alan0893/Alan0893/main/bg2.jpg') no-repeat center center;
-  background-size: cover;
-]{x0000}$}

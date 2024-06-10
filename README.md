@@ -4,7 +4,8 @@
 <p align="center">
   <a href="https://alanv2.netlify.app/" target="_blank">Portfolio</a> |
   <a href="mailto:alanl07905@gmail.com" target="_blank">Email</a> |
-  <a href="https://www.linkedin.com/in/alanl193/" target="_blank">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/alanl193/" target="_blank">LinkedIn</a> |
+  <a href="https://alanv2.netlify.app/resume.pdf" target="_blank">Resume</a>
 </p>
 
 ## Skills

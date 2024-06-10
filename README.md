@@ -82,4 +82,4 @@ collections, ensuring high scalability and reliability. Incorporated Firebase au
 secure user sign-in and account creation, achieving a 99% user authentication success rate. Utilized Firebase 
 storage for seamless storage of user profile pictures.
 
-[![Alan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Alan0893&theme=react)](https://github.com/Alan0893/github-readme-activity-graph)
+[![Alan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Alan0893&theme=react)](https://github-readme-activity-graph.vercel.app/graph?username=Alan0893&theme=react)

@@ -9,7 +9,9 @@
 </p>
 
 ## Skills
-
+<div align="center">
+  <img src="https://github-stats-iota-umber.vercel.app/api/top-langs/?username=alan0893&layout=compact&langs_count=8&theme=react" width="400" height="200" alt="Top Langs">
+</div>
 <details>
   <summary><strong>Programming Languages</strong></summary>
   <p align="left">
@@ -82,4 +84,5 @@ collections, ensuring high scalability and reliability. Incorporated Firebase au
 secure user sign-in and account creation, achieving a 99% user authentication success rate. Utilized Firebase 
 storage for seamless storage of user profile pictures.
 
-[![Alan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Alan0893&theme=react&area_color=61DAFB&area=true&radius=6)](https://github-readme-activity-graph.vercel.app/graph?username=Alan0893&theme=react&area_color=61DAFB&area=true&radius=6)
+
+![Alan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Alan0893&theme=react&area_color=61DAFB&area=true&radius=6)

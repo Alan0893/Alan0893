@@ -10,7 +10,7 @@
 
 ## Skills
 <div align="center">
-  <img src="https://github-stats-iota-umber.vercel.app/api/top-langs/?username=alan0893&layout=compact&langs_count=8&theme=react" width="400" height="200" alt="Top Langs">
+  <img src="https://github-stats-iota-umber.vercel.app/api/top-langs/?username=alan0893&layout=compact&langs_count=10&theme=react" width="400" height="200" alt="Top Langs">
 </div>
 <details>
   <summary><strong>Programming Languages</strong></summary>

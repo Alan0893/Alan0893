@@ -34,8 +34,6 @@
 </details>
 
 ## Projects
-
-### [Munchy Minions](https://github.com/Alan0893/Recipe)
 TBD
 
 

@@ -5,7 +5,6 @@
   <a href="https://alan0893.github.io/" target="_blank">Portfolio</a> |
   <a href="mailto:alanl07905@gmail.com" target="_blank">Email</a> |
   <a href="https://www.linkedin.com/in/alanl193/" target="_blank">LinkedIn</a> |
-  <a href="https://alan0893.github.io/resume.pdf" target="_blank">Resume</a>
 </p>
 
 ## Skills

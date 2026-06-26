@@ -16,10 +16,13 @@ const NORMALIZE = {
   'Makefile':    null,
   'Dockerfile':  null,
   'Shell':       'Bash',
+  'HTML':        'HTML/CSS',
+  'CSS':         'HTML/CSS',
+  'Go':          null,
   'Go Template': null,
   'Jinja':       null,
   'Mako':        null,
-  'SCSS':        null,
+  'SCSS':        'HTML/CSS',
   'HCL':         null,
   'Smarty':      null,
   'EJS':         null,
@@ -63,7 +66,7 @@ async function main() {
 
   const ordered = [...merged];
   const line = ordered.map(l => `\`${l}\``).join(' ');
-  const block = `<!-- LANGUAGES:START -->\n#### Languages\n${line}\n<!-- LANGUAGES:END -->`;
+  const block = `<!-- LANGUAGES:START -->\n**Languages**<br>\n${line}\n<!-- LANGUAGES:END -->`;
 
   const readme = fs.readFileSync('README.md', 'utf8');
   const updated = readme.replace(

@@ -9,16 +9,16 @@
 
 <!-- LANGUAGES:START -->
 #### Languages
-JavaScript/TypeScript | Python | Java | SQL | Kotlin | C/C++ | Bash | HTML/CSS
+`JavaScript/TypeScript` `Python` `Java` `SQL` `Kotlin` `C/C++` `Bash` `HTML/CSS`
 <!-- LANGUAGES:END -->
 
 #### Frameworks & Libraries
-React.js | Next.js | Node.js | FastAPI | Flask | GraphQL | Material-UI | Scikit-Learn | Pandas
+`React.js` `Next.js` `Node.js` `FastAPI` `Flask` `GraphQL` `Material-UI` `Scikit-Learn` `Pandas`
 
 #### Cloud & DevOps
-Docker | Kubernetes | OpenShift | AWS | Azure | Linux | CI/CD (GitHub Actions)
+`Docker` `Kubernetes` `OpenShift` `AWS` `Azure` `Linux` `CI/CD (GitHub Actions)`
 
 #### Databases & Tools
-PostgreSQL | MySQL | MongoDB | Prisma ORM | Firebase | Git | Postman | Jest
+`PostgreSQL` `MySQL` `MongoDB` `Prisma ORM` `Firebase` `Git` `Postman` `Jest`
 
 ![Alan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Alan0893&theme=react&area_color=61DAFB&area=true&radius=6)

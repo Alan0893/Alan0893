@@ -62,7 +62,7 @@ async function main() {
   }
 
   const ordered = [...merged];
-  const line = ordered.join(' | ');
+  const line = ordered.map(l => `\`${l}\``).join(' ');
   const block = `<!-- LANGUAGES:START -->\n#### Languages\n${line}\n<!-- LANGUAGES:END -->`;
 
   const readme = fs.readFileSync('README.md', 'utf8');

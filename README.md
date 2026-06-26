@@ -9,7 +9,7 @@
 
 <!-- LANGUAGES:START -->
 #### Languages
-`JavaScript/TypeScript` `Python` `Java` `SQL` `Kotlin` `C/C++` `Bash` `HTML/CSS`
+`JavaScript/TypeScript` `Python` `Java` `SQL` `Kotlin` `C/C++` `Bash` `HTML/CSS` `Go` `CSS` `HTML`
 <!-- LANGUAGES:END -->
 
 #### Frameworks & Libraries

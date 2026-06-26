@@ -1,5 +1,5 @@
 <h1 align="center">Hi, I'm Alan</h1>
-<h3 align="center">CS Student @ Boston University</h3>
+<h3 align="center">SWE Intern @ Red Hat</h3>
 
 <p align="center">
   <a href="https://alan0893.github.io/" target="_blank">Portfolio</a> |

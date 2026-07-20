@@ -1,5 +1,5 @@
 ## Hi, I'm Alan
-**SWE Intern @ Red Hat**
+**SWE Intern @ Red Hat**<br>
 [Portfolio](https://alan0893.github.io) | [Email](mailto:alanl07905@gmail.com) | [LinkedIn](https://linkedin.com/in/alanl193)
 
 <picture>

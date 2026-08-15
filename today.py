@@ -71,13 +71,17 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None):
     }'''
     variables = {'owner_affiliation': owner_affiliation, 'login': USER_NAME, 'cursor': cursor}
     request = simple_request(graph_repos_stars.__name__, query, variables)
+    
     if count_type == 'repos':
         return request.json()['data']['user']['repositories']['totalCount']
     elif count_type == 'stars':
         edges = request.json()['data']['user']['repositories']['edges']
         total = 0
         for node in edges:
-            total += node['node']['stargazers']['totalCount']
+            try:
+                total += node['node']['stargazers']['totalCount']
+            except (TypeError, KeyError):
+                pass
         return total
 
 

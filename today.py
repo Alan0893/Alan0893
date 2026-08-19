@@ -1,11 +1,13 @@
-import requests
+import json
 import os
 import hashlib
 import time
+import requests
 from lxml import etree
 
-HEADERS = {'authorization': 'token ' + os.environ['ACCESS_TOKEN']}
-USER_NAME = os.environ['USER_NAME']
+PROFILE_PATH = 'profile.json'
+LINE_WIDTH = 63
+USER_NAME = os.environ.get('USER_NAME', 'Alan0893')
 QUERY_COUNT = {
     'user_getter': 0, 'follower_getter': 0, 'graph_repos_stars': 0,
     'recursive_loc': 0, 'graph_commits': 0, 'loc_query': 0
@@ -17,11 +19,15 @@ def format_plural(unit):
     return 's' if unit != 1 else ''
 
 
+def auth_headers():
+    return {'authorization': 'token ' + os.environ['ACCESS_TOKEN']}
+
+
 def simple_request(func_name, query, variables):
     request = requests.post(
         'https://api.github.com/graphql',
         json={'query': query, 'variables': variables},
-        headers=HEADERS
+        headers=auth_headers()
     )
     if request.status_code == 200:
         return request
@@ -123,7 +129,7 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
     request = requests.post(
         'https://api.github.com/graphql',
         json={'query': query, 'variables': variables},
-        headers=HEADERS
+        headers=auth_headers()
     )
     if request.status_code == 200:
         if request.json()['data']['repository']['defaultBranchRef'] is not None:
@@ -317,9 +323,41 @@ def perf_counter(funct, *args):
     return funct_return, time.perf_counter() - start
 
 
-def svg_overwrite(filename, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data):
+def load_profile(path=PROFILE_PATH):
+    with open(path, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def profile_justify_length(key_label):
+    prefix_len = 2 + len(key_label) + 1
+    return LINE_WIDTH - prefix_len - 2
+
+
+def apply_profile(root, profile):
+    fields = [
+        ('role_data', profile['role'], 'Role'),
+        ('location_data', profile['location'], 'Location'),
+        ('portfolio_data', profile['portfolio'], 'Portfolio'),
+        ('lang_prog_data', profile['languages']['programming'], 'Languages.Programming'),
+        ('lang_other_data', profile['languages']['other'], 'Languages.Other'),
+        ('frameworks_data', profile['frameworks'], 'Frameworks'),
+        ('cloud_data', profile['cloud_devops'], 'Cloud.DevOps'),
+        ('databases_data', profile['databases'], 'Databases'),
+        ('email_data', profile['email'], 'Email'),
+        ('linkedin_data', profile['linkedin'], 'LinkedIn'),
+    ]
+    for element_id, value, key_label in fields:
+        justify_format(root, element_id, value, profile_justify_length(key_label))
+
+
+def write_svg(tree, filename):
+    tree.write(filename, encoding='utf-8', xml_declaration=True)
+
+
+def svg_overwrite(filename, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data, profile):
     tree = etree.parse(filename)
     root = tree.getroot()
+    apply_profile(root, profile)
     justify_format(root, 'commit_data', commit_data, 18)
     justify_format(root, 'star_data', star_data, 22)
     justify_format(root, 'repo_data', repo_data, 20)
@@ -328,7 +366,7 @@ def svg_overwrite(filename, commit_data, star_data, repo_data, contrib_data, fol
     justify_format(root, 'loc_data', loc_data[2], 14)
     justify_format(root, 'loc_add', loc_data[0])
     justify_format(root, 'loc_del', loc_data[1], 7)
-    tree.write(filename, encoding='utf-8', xml_declaration=True)
+    write_svg(tree, filename)
 
 
 def justify_format(root, element_id, new_text, length=0):
@@ -362,31 +400,44 @@ def formatter(query_type, difference, funct_return=False, whitespace=0):
     return funct_return
 
 
+def apply_profile_to_svgs(profile, filenames=('dark_mode.svg', 'light_mode.svg')):
+    for filename in filenames:
+        tree = etree.parse(filename)
+        apply_profile(tree.getroot(), profile)
+        write_svg(tree, filename)
+        print('Updated', filename, 'from', PROFILE_PATH)
+
+
 if __name__ == '__main__':
-    print('Calculation times:')
+    profile = load_profile()
 
-    user_data, user_time = perf_counter(user_getter, USER_NAME)
-    OWNER_ID, acc_date = user_data
-    formatter('account data', user_time)
-
-    total_loc, loc_time = perf_counter(loc_query, ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'], 7)
-    if total_loc[-1]:
-        formatter('LOC (cached)', loc_time)
+    if not os.environ.get('ACCESS_TOKEN'):
+        apply_profile_to_svgs(profile)
     else:
-        formatter('LOC (no cache)', loc_time)
+        print('Calculation times:')
 
-    commit_data, commit_time = perf_counter(commit_counter, 7)
-    star_data, star_time = perf_counter(graph_repos_stars, 'stars', ['OWNER'])
-    repo_data, repo_time = perf_counter(graph_repos_stars, 'repos', ['OWNER'])
-    contrib_data, contrib_time = perf_counter(graph_repos_stars, 'repos', ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'])
-    follower_data, follower_time = perf_counter(follower_getter, USER_NAME)
+        user_data, user_time = perf_counter(user_getter, USER_NAME)
+        OWNER_ID, acc_date = user_data
+        formatter('account data', user_time)
 
-    for index in range(len(total_loc) - 1):
-        total_loc[index] = '{:,}'.format(total_loc[index])
+        total_loc, loc_time = perf_counter(loc_query, ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'], 7)
+        if total_loc[-1]:
+            formatter('LOC (cached)', loc_time)
+        else:
+            formatter('LOC (no cache)', loc_time)
 
-    svg_overwrite('dark_mode.svg', commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
-    svg_overwrite('light_mode.svg', commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
+        commit_data, commit_time = perf_counter(commit_counter, 7)
+        star_data, star_time = perf_counter(graph_repos_stars, 'stars', ['OWNER'])
+        repo_data, repo_time = perf_counter(graph_repos_stars, 'repos', ['OWNER'])
+        contrib_data, contrib_time = perf_counter(graph_repos_stars, 'repos', ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'])
+        follower_data, follower_time = perf_counter(follower_getter, USER_NAME)
 
-    print('\nTotal GitHub GraphQL API calls:', '{:>3}'.format(sum(QUERY_COUNT.values())))
-    for funct_name, count in QUERY_COUNT.items():
-        print('{:<28}'.format('   ' + funct_name + ':'), '{:>6}'.format(count))
+        for index in range(len(total_loc) - 1):
+            total_loc[index] = '{:,}'.format(total_loc[index])
+
+        svg_overwrite('dark_mode.svg', commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1], profile)
+        svg_overwrite('light_mode.svg', commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1], profile)
+
+        print('\nTotal GitHub GraphQL API calls:', '{:>3}'.format(sum(QUERY_COUNT.values())))
+        for funct_name, count in QUERY_COUNT.items():
+            print('{:<28}'.format('   ' + funct_name + ':'), '{:>6}'.format(count))

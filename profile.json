@@ -6,8 +6,8 @@
     "programming": "JS/TS, Python, Java, Kotlin, C/C++",
     "other": "HTML/CSS, SQL, Bash, YAML"
   },
-  "frameworks": "React.js, Next.js, FastAPI, Flask, PyTorch, GraphQL",
-  "cloud_devops": "Docker, Kubernetes, OpenShift, AWS, Azure, GitHub Actions",
+  "frameworks": "Next.js, FastAPI, Flask, PyTorch, GraphQL",
+  "cloud_devops": "Docker, Kubernetes, OpenShift, AWS, Azure",
   "databases": "PostgreSQL, MySQL, MongoDB, Firebase",
   "email": "alanl07905@gmail.com",
   "linkedin": "alanl193"

@@ -354,14 +354,13 @@ def write_svg(tree, filename):
     tree.write(filename, encoding='utf-8', xml_declaration=True)
 
 
-def svg_overwrite(filename, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data, profile):
+def svg_overwrite(filename, commit_data, star_data, repo_data, follower_data, loc_data, profile):
     tree = etree.parse(filename)
     root = tree.getroot()
     apply_profile(root, profile)
     justify_format(root, 'commit_data', commit_data, 18)
     justify_format(root, 'star_data', star_data, 22)
     justify_format(root, 'repo_data', repo_data, 20)
-    justify_format(root, 'contrib_data', contrib_data)
     justify_format(root, 'follower_data', follower_data, 18)
     justify_format(root, 'loc_data', loc_data[2], 14)
     justify_format(root, 'loc_add', loc_data[0])
@@ -430,14 +429,13 @@ if __name__ == '__main__':
         commit_data, commit_time = perf_counter(commit_counter, 7)
         star_data, star_time = perf_counter(graph_repos_stars, 'stars', ['OWNER'])
         repo_data, repo_time = perf_counter(graph_repos_stars, 'repos', ['OWNER'])
-        contrib_data, contrib_time = perf_counter(graph_repos_stars, 'repos', ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'])
         follower_data, follower_time = perf_counter(follower_getter, USER_NAME)
 
         for index in range(len(total_loc) - 1):
             total_loc[index] = '{:,}'.format(total_loc[index])
 
-        svg_overwrite('dark_mode.svg', commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1], profile)
-        svg_overwrite('light_mode.svg', commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1], profile)
+        svg_overwrite('dark_mode.svg', commit_data, star_data, repo_data, follower_data, total_loc[:-1], profile)
+        svg_overwrite('light_mode.svg', commit_data, star_data, repo_data, follower_data, total_loc[:-1], profile)
 
         print('\nTotal GitHub GraphQL API calls:', '{:>3}'.format(sum(QUERY_COUNT.values())))
         for funct_name, count in QUERY_COUNT.items():

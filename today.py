@@ -385,8 +385,9 @@ def justify_format(root, element_id, new_text, length=0):
 
 def find_and_replace(root, element_id, new_text):
     element = root.find(f".//*[@id='{element_id}']")
-    if element is not None:
-        element.text = new_text
+    if element is None:
+        raise ValueError(f"SVG element not found: {element_id}")
+    element.text = new_text
 
 
 def formatter(query_type, difference, funct_return=False, whitespace=0):

@@ -24,13 +24,22 @@ def auth_headers():
 
 
 def simple_request(func_name, query, variables):
-    request = requests.post(
-        'https://api.github.com/graphql',
-        json={'query': query, 'variables': variables},
-        headers=auth_headers()
-    )
-    if request.status_code == 200:
-        return request
+    max_retries = 3
+    for attempt in range(max_retries):
+        request = requests.post(
+            'https://api.github.com/graphql',
+            json={'query': query, 'variables': variables},
+            headers=auth_headers()
+        )
+        if request.status_code == 200:
+            return request
+        elif request.status_code in [500, 502, 503, 504]:
+            print(f"GitHub API returned {request.status_code} in {func_name}. Retrying in 2 seconds... ({attempt + 1}/{max_retries})")
+            time.sleep(2)
+            continue
+        else:
+            break
+            
     raise Exception(func_name, 'failed with', request.status_code, request.text, QUERY_COUNT)
 
 
@@ -126,20 +135,36 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
         }
     }'''
     variables = {'repo_name': repo_name, 'owner': owner, 'cursor': cursor}
-    request = requests.post(
-        'https://api.github.com/graphql',
-        json={'query': query, 'variables': variables},
-        headers=auth_headers()
-    )
-    if request.status_code == 200:
-        if request.json()['data']['repository']['defaultBranchRef'] is not None:
-            return loc_counter_one_repo(
-                owner, repo_name, data, cache_comment,
-                request.json()['data']['repository']['defaultBranchRef']['target']['history'],
-                addition_total, deletion_total, my_commits
-            )
+    
+    # Retry mechanism for temporary server errors
+    max_retries = 3
+    for attempt in range(max_retries):
+        request = requests.post(
+            'https://api.github.com/graphql',
+            json={'query': query, 'variables': variables},
+            headers=auth_headers()
+        )
+        
+        if request.status_code == 200:
+            if request.json()['data']['repository']['defaultBranchRef'] is not None:
+                return loc_counter_one_repo(
+                    owner, repo_name, data, cache_comment,
+                    request.json()['data']['repository']['defaultBranchRef']['target']['history'],
+                    addition_total, deletion_total, my_commits
+                )
+            else:
+                return 0
+                
+        # If GitHub has a temporary hiccup, wait 2 seconds and try again
+        elif request.status_code in [500, 502, 503, 504]:
+            print(f"GitHub API returned {request.status_code}. Retrying in 2 seconds... ({attempt + 1}/{max_retries})")
+            time.sleep(2)
+            continue
+            
+        # Break out for other errors (like 403)
         else:
-            return 0
+            break
+
     force_close_file(data, cache_comment)
     if request.status_code == 403:
         raise Exception('Too many requests - hit the anti-abuse limit!')
@@ -209,6 +234,7 @@ def loc_query(owner_affiliation, comment_size=0, force_cache=False, cursor=None,
         )
     else:
         return cache_builder(edges + valid_edges, comment_size, force_cache)
+
 
 def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
     cached = True
